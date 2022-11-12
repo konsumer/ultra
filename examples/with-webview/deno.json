@@ -1,0 +1,16 @@
+{
+  "tasks": {
+    "test": "deno test --allow-all",
+    "dev:frontend": "deno run -A --no-check --watch ./server.tsx",
+    "dev:wrapper": "DEV=1 deno run -Ar --watch --unstable webview.js",
+    "dev": "deno task dev:frontend & deno task dev:wrapper",
+    "build:frontend": "deno run -A ./build.ts",
+    "build:wrapper": "deno compile -Ar --unstable --output .ultra/demo webview.js",
+    "build": "deno task build:frontend && deno task build:wrapper"
+  },
+  "compilerOptions": {
+    "jsx": "react-jsxdev",
+    "jsxImportSource": "react"
+  },
+  "importMap": "./importMap.json"
+}
