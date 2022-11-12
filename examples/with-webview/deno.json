@@ -2,7 +2,7 @@
   "tasks": {
     "test": "deno test --allow-all",
     "dev": "deno run -Ar --unstable --no-check --watch ./server.tsx",
-    "build": "deno run -A ./build.ts && cd .ultra && deno compile -Ar --unstable --output .ultra/demo server.js && rm webview.js server.js deno.*"
+    "build": "deno run -A ./build.ts && cd .ultra && deno compile -Ar --unstable --output demo server.js && rm server.js deno.*"
   },
   "compilerOptions": {
     "jsx": "react-jsxdev",
